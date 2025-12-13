@@ -4,7 +4,6 @@ import Button from "../ui/components/button";
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 
-
 emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
 
 export default function Page() {
