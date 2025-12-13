@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --dark: hsl(0, 0%, 9%);
+  --light: #ffffff;
+
+  --primary: var(--dark);
+  --secondary: var(--light);
+  --accent: oklch(68.5% 0.169 237.323);
+  --secondaryAccent: oklch(76.9% 0.188 70.08);
+
+  
+}
+
+@theme app {
+  /* Colours */
+  /* Primary */
+  --color-primary-500: var(--primary);
+
+  /* Secondary */
+  --color-secondary-500: var(--secondary);
+
+  /* Accent */
+  --color-accent: var(--accent);
+
+  /* Secondary Accent */
+  --color-accenttwo: var(--secondaryAccent);
+
+  /* Spacings */
+  --spacing-4xs: 0.25rem;
+  --spacing-3xs: 0.5rem;
+  --spacing-2xs: 0.75rem;
+  --spacing-xs: 1rem;
+  --spacing-s: 1.25rem;
+  --spacing-m: 1.75rem;
+  --spacing-l: 2.5rem;
+  --spacing-xl: 3.75rem;
+  --spacing-2xl: 6.25rem;
+  --spacing-3xl: 10rem;
+  --spacing-4xl: 15rem;
+  
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: var(--light);
+    --secondary: var(--dark);
+  }
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1,.875rem;
+}
+
+
+.sheet {
+  position: absolute;
+  inset: 0;
+  background: var(--secondary);
+  clip-path: polygon(
+    0% 60%,   /* left slightly lower */
+    100% 40%, /* right slightly higher */
+    100% 100%,
+    0% 100%
+  );
+  opacity: 0.01;
+}
+
+
+/* Animation sheets */
+.sheet {
+  animation: float 10s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.sheet-1 {
+  animation-delay: 0s;
+}
+
+.sheet-2 {
+  animation-delay: -3.33s;
+}
+
+.sheet-3 {
+  animation-delay: -6.66s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-24px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
