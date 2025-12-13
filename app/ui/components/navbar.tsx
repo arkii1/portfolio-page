@@ -31,7 +31,7 @@ export default function Navbar() {
 
     return <>
         {/* Menu button */}
-        <Bars3Icon onClick={() => setOpen(true)} className='absolute top-xs left-xs w-l h-l'/>
+        <Bars3Icon onClick={() => setOpen(true)} className='absolute top-xs left-xs w-l h-l cursor-pointer'/>
     
         {/* Background */}
         {open && (
