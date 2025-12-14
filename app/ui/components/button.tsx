@@ -1,12 +1,13 @@
 import Link from "next/link";
 
-export default function Button({ text, onClick, classes = '', type = 'primary', link = ''}:
+export default function Button({ text, onClick, classes = '', type = 'primary', link = '', ariaLabel}:
     {
         text: string,
         classes?: string,
         onClick?: () => void,
         type?: 'primary' | 'secondary',
-        link? : string
+        link? : string,
+        ariaLabel: string
     }
 ) {
 
@@ -19,9 +20,9 @@ export default function Button({ text, onClick, classes = '', type = 'primary', 
 
   return (
     link != '' ? 
-      <Link href={link} className={allClasses}>{text}</Link> 
+      <Link href={link} className={allClasses}>{text} aria-label={ariaLabel}</Link> 
       : 
-      <button type="button" onClick={onClick} className={allClasses}>
+      <button type="button" onClick={onClick} className={allClasses} aria-label={ariaLabel}>
         {text}
       </button>
   );

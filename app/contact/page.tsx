@@ -68,7 +68,7 @@ export default function Page() {
                 />
             </div>
             <div className="mt-8 flex justify-end">
-                <Button text="Send message" onClick={submitForm}/>
+                <Button text="Send message" onClick={submitForm} ariaLabel="Click to send email"/>
             </div>
         </form>
     )

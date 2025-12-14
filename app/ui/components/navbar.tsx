@@ -13,15 +13,19 @@ import { usePathname } from 'next/navigation'
 const links = [
     {
         label: 'Home',
-        route: '/'
+        route: '/',
+        ariaLabel: 'Home page'
     },
+
     {
         label: 'Contact',
-        route: '/contact'
+        route: '/contact',
+        ariaLabel: 'Contact page'
     },
     {
         label: 'CV',
-        route: '/cv.pdf'
+        route: '/cv.pdf',
+        ariaLabel: 'View CV'
     }
 ]
 
@@ -31,7 +35,9 @@ export default function Navbar() {
 
     return <>
         {/* Menu button */}
-        <Bars3Icon onClick={() => setOpen(true)} className='absolute top-xs left-xs w-m h-m cursor-pointer'/>
+        <button className='absolute top-xs left-xs  cursor-pointer' onClick={() => setOpen(true)} aria-label="Open main menu" aria-expanded={open}>
+          <Bars3Icon  className="w-m h-m"/>
+        </button>
     
         {/* Background */}
         {open && (
@@ -48,17 +54,26 @@ export default function Navbar() {
           transform transition-transform duration-300 ease-out
           ${open ? 'translate-x-0 ' : '-translate-x-full'}
         `}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Main menu"
       >
         {/* Close button */}
-        <XMarkIcon
+        <button
           onClick={() => setOpen(false)}
-          className="absolute top-xs right-xs w-m h-m cursor-pointer"
-        />
+          aria-label="Close menu"
+          className="absolute top-xs right-xs cursor-pointer"
+        >
+          <XMarkIcon
+            className="w-m h-m"
+          />
+        </button>
+        
 
         {/* Content */}
         <nav className="p-m flex flex-col gap-s">
-           {links.map(({label, route } : {label: string, route: string}) => 
-                <Link onClick={() => setOpen(false)} key={route} href={route} className={`${pathname == route ? 'font-bold text-accent' : ''}`}>{label}</Link>
+           {links.map(({label, route, ariaLabel } : {label: string, route: string, ariaLabel: string}) => 
+                <Link onClick={() => setOpen(false)} key={route} href={route} className={`${pathname == route ? 'font-bold text-accent' : ''}`} aria-label={ariaLabel}>{label}</Link>
             )}
         </nav>
       </aside>
