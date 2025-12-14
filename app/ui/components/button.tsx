@@ -20,7 +20,7 @@ export default function Button({ text, onClick, classes = '', type = 'primary', 
 
   return (
     link != '' ? 
-      <Link href={link} className={allClasses}>{text} aria-label={ariaLabel}</Link> 
+      <Link href={link} className={allClasses} aria-label={ariaLabel}>{text} </Link> 
       : 
       <button type="button" onClick={onClick} className={allClasses} aria-label={ariaLabel}>
         {text}
