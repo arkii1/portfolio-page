@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`antialiased relative overflow-hidden flex flex-col items-center  transition-colors duration-300 ease-in-out`}
       >
-        <div className="absolute right-xs top-6">
+        <div className="absolute right-xs top-4.5">
           <LightDarkToggle />
         </div>
         <Navbar />
