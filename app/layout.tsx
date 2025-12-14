@@ -1,5 +1,7 @@
 import "./globals.css";
 import Navbar from "./ui/components/navbar";
+import LightDarkToggle from "./ui/components/lightDarkToggle";
+
 
 export default function RootLayout({
   children,
@@ -14,6 +16,9 @@ export default function RootLayout({
       <body
         className={`antialiased relative overflow-hidden flex flex-col items-center`}
       >
+        <div className="absolute right-xs top-6">
+          <LightDarkToggle />
+        </div>
         <Navbar />
 
         <main className="flex flex-col items-center justify-center h-screen w-screen p-s max-w-[720px]">{children}</main>

@@ -9,7 +9,19 @@
   --accent: oklch(68.5% 0.169 237.323);
   --secondaryAccent: oklch(76.9% 0.188 70.08);
 
-  
+  /* For theme toggle */
+  &.light {
+    --primary: var(--light);
+    --secondary: var(--dark);  
+  }
+}
+
+/* Prefers light mode and not toggled */
+@media (prefers-color-scheme: light) {
+  :root:not(.dark) {
+    --primary: var(--light);
+    --secondary: var(--dark);
+  }
 }
 
 @theme app {
@@ -41,13 +53,6 @@
   
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --primary: var(--light);
-    --secondary: var(--dark);
-  }
-}
-
 body {
   background-color: var(--primary);
   color: var(--secondary);
@@ -63,7 +68,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1,.875rem;
+  font-size: 1.875rem;
 }
 
 
