@@ -2,8 +2,9 @@
 
 import Button from "./components/button"
 import IconLink from "./components/iconLink"
-
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import FloatingAction from "./components/floatingAction";
+
 
 export default function Hero() {
   return (
@@ -15,6 +16,7 @@ export default function Hero() {
             <IconLink link="https://github.com/arkii1" icon={FaGithub} classes='opacity-75' ariaLabel="Go to Tommy's GitHub page"/>
           </div>
           <Button text="Contact me" link='/contact' type="primary" ariaLabel="Go to Contact me page" classes="mt-s"/>
+          <FloatingAction />
     </section>
   )
 }

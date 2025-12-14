@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Hero/>
-      <section className="flex flex-col">
+      <section className="flex flex-col" id="projects">
         <h2 className="font-semibold">Projects</h2>
         <p className="">Notable personal projects</p>
         <div className="border-b-1 my-l"></div>

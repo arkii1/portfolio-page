@@ -121,3 +121,17 @@ h3 {
     transform: translateY(0);
   }
 }
+
+/* Floating action animations */
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-bob {
+  animation: bob 2.5s ease-in-out infinite;
+}

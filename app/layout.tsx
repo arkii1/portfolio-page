@@ -2,7 +2,6 @@ import "./globals.css";
 import Navbar from "./ui/components/navbar";
 import LightDarkToggle from "./ui/components/lightDarkToggle";
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,6 +28,7 @@ export default function RootLayout({
         <Navbar />
 
         <main className="flex flex-col items-center justify-center w-screen p-s max-w-[720px]">{children}</main>
+
         <div 
           className="fixed h-screen w-full overflow-hidden bg-secondary/50 flex items-center justify-center top-50 pointer-events-none"
           aria-hidden="true"
