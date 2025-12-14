@@ -17,7 +17,7 @@ export default function LightDarkToggle() {
   }
 
   return (
-    <div className="group relative inline-flex w-11 shrink-0 rounded-full bg-secondary-500/5 p-0.5 inset-ring inset-ring-secondary-500/10 outline-offset-2 outline-accent-500 transition-colors duration-200 ease-in-out">
+    <div className="group relative inline-flex w-11 shrink-0 rounded-full bg-secondary-500/5 p-0.5 inset-ring inset-ring-secondary-500/10 outline-offset-2 outline-accent-500 transition-colors duration-300 ease-in-out">
       <span className="relative size-5 rounded-full bg-secondary-500 shadow-xs ring-1 transition-transform duration-200 ease-in-out group-has-checked:translate-x-5">
         <span
           aria-hidden="true"

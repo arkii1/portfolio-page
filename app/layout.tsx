@@ -14,7 +14,7 @@ export default function RootLayout({
         <title>Welcome :)</title>
       </head>
       <body
-        className={`antialiased relative overflow-hidden flex flex-col items-center`}
+        className={`antialiased relative overflow-hidden flex flex-col items-center  transition-colors duration-300 ease-in-out`}
       >
         <div className="absolute right-xs top-6">
           <LightDarkToggle />
