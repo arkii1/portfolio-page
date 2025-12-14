@@ -49,7 +49,7 @@ export default function FloatingAction() {
           bg-secondary-500 text-primary-500
           rounded-full p-4xs
           transition-transform duration-500 ease-in-out
-          ${atProjects ? 'rotate-180' : 'rotate-0'}
+          ${atProjects ? '-rotate-180' : 'rotate-0'}
         `}
       />
     </button>
