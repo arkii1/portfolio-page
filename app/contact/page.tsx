@@ -26,7 +26,7 @@ export default function Page() {
     }
 
     return (
-        <form className="flex flex-col gap-2xs w-full">
+        <form className="flex flex-col gap-2xs w-full" aria-label="Contact form">
             <div className="flex flex-col gap-3xs">
                 <label htmlFor="name" className="text-sm/6 font-semibold">
                     Name
@@ -35,9 +35,9 @@ export default function Page() {
                     id="name"
                     name="name"
                     type="text"
-                    placeholder="Jane Doe"
                     className="rounded-md bg-secondary-500/5 px-2xs py-3xs outline-1 -outline-offset-1 outline-secondary-500/10 placeholder:text-secondary-500/20"
                     onChange={(e) => setName(e.target.value) }
+                    required
                 />
             </div>
             <div className="flex flex-col gap-3xs">
@@ -45,12 +45,12 @@ export default function Page() {
                     Email
                 </label>
                 <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="lorem@ipsum.com"
-                className="rounded-md bg-secondary-500/5 px-2xs py-3xs outline-1 -outline-offset-1 outline-secondary-500/10 placeholder:text-secondary-500/20"
-                onChange={(e) => setEmail(e.target.value) }
+                    id="email"
+                    name="email"
+                    type="email"
+                    className="rounded-md bg-secondary-500/5 px-2xs py-3xs outline-1 -outline-offset-1 outline-secondary-500/10 placeholder:text-secondary-500/20"
+                    onChange={(e) => setEmail(e.target.value) }
+                    required
                 />
             </div>
             <div className="flex flex-col gap-3xs">
@@ -64,7 +64,7 @@ export default function Page() {
                     className="rounded-md bg-secondary-500/5 px-2xs py-3xs outline-1 -outline-offset-1 outline-secondary-500/10 placeholder:text-secondary-500/20"
                     defaultValue={''}
                     onChange={(e) => setMessage(e.target.value) }
-                    placeholder="Send message"
+                    required
                 />
             </div>
             <div className="mt-8 flex justify-end">
