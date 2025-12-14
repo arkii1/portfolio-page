@@ -36,7 +36,7 @@ export default function Navbar() {
         {/* Background */}
         {open && (
         <div
-          className="fixed inset-0 bg-primary/40 z-40"
+          className="fixed inset-0 bg-primary-500/40 z-40 cursor-pointer"
           onClick={() => setOpen(false)}
         />
       )}
@@ -44,7 +44,7 @@ export default function Navbar() {
       {/* Side sheet */}
       <aside
         className={`
-          fixed top-0 left-0 h-screen bg-primary-500 shadow w-5/6 z-50
+          fixed top-0 left-0 h-screen bg-primary-500 shadow w-4xl z-50
           transform transition-transform duration-300 ease-out
           ${open ? 'translate-x-0 ' : '-translate-x-full'}
         `}
