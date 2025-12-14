@@ -21,14 +21,14 @@ export default function RootLayout({
         <link rel="canonical" href="https://tommymapp.dev/" />
       </head>
       <body
-        className={`antialiased relative overflow-hidden flex flex-col items-center  transition-colors duration-300 ease-in-out`}
+        className={`antialiased relative overflow-x-hidden flex flex-col items-center  transition-colors duration-300 ease-in-out`}
       >
         <div className="absolute right-xs top-5">
           <LightDarkToggle />
         </div>
         <Navbar />
 
-        <main className="flex flex-col items-center justify-center h-screen w-screen p-s max-w-[720px]">{children}</main>
+        <main className="flex flex-col items-center justify-center w-screen p-s max-w-[720px]">{children}</main>
         <div 
           className="absolute h-screen w-full overflow-hidden bg-secondary/50 flex items-center justify-center -bottom-1/4 pointer-events-none"
           aria-hidden="true"
