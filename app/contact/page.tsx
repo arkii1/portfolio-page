@@ -11,19 +11,27 @@ export default function Page() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     
-    const submitForm = () => {
+    const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
         const reqBody = {
-            name: name,
-            email: email,
-            message: message
+            name,
+            email,
+            message,
         };
 
-        emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, reqBody).then((res) => {
-            alert('Email successfully sent!')
-        }).catch((error) => {
-            alert('Email failed to send :( Please contact me manually via tommy.mapp@hotmail.com.')
-        })
-    }
+        try {
+            await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                reqBody
+            );
+            alert('Email successfully sent!');
+        } catch (error) {
+            alert('Email failed to send :( Please contact me manually via tommy.mapp@hotmail.com.');
+        }
+    };
+
 
     return (
         <form className="flex flex-col gap-2xs w-full h-screen justify-center" aria-label="Contact form">
@@ -68,7 +76,11 @@ export default function Page() {
                 />
             </div>
             <div className="mt-8 flex justify-end">
-                <Button text="Send message" onClick={submitForm} ariaLabel="Click to send email"/>
+                <Button
+                    text="Send message"
+                    ariaLabel="Click to send email"
+                    htmlType="submit"
+                />
             </div>
         </form>
     )
