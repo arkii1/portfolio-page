@@ -33,7 +33,7 @@ export default function CareerTimeline() {
                 <p className="opacity-60 mt-2">{description}</p>
                 <div className='mt-6 flex gap-3'>
                     {techIcons.map(icon => <div className='relative group' key={icon}>
-                        <StackIcon className={`h-5 w-5 ${['expressjs', 'aws', 'mysql'].includes(icon) ? 'brightness-0 invert' : ''}`} name={icon} />
+                        <StackIcon className={`h-5 w-5 ${['expressjs', 'aws'].includes(icon) ? 'brightness-0 invert' : ''}`} name={icon} />
                          <span className="left-0  absolute bottom-full mb-2 px-2 py-1 text-xs rounded-lg bg-secondary-500 text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity">
                             {icon}
                         </span>
@@ -108,10 +108,10 @@ export default function CareerTimeline() {
                     'Feb 2026', 
                     'Made Tech', 
                     'Software Engineer', 
-                    'Joining new company.',
+                    'Building a legal aid platform to help the Ministry of Justice respond to increased inquests linked to the Labour manifesto commitment on Hillsborough Law.',
                     true,
                     'mt-12',
-                    [],
+                    ['typescript', 'expressjs', 'python', 'postgresql', 'terraform', 'aws', 'claude'],
                     madetechImage,
                     '',
                     'https://www.madetech.com/'
