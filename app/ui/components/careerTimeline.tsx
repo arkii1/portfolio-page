@@ -108,7 +108,7 @@ export default function CareerTimeline() {
                     'Feb 2026', 
                     'Made Tech', 
                     'Software Engineer', 
-                    'Building a legal aid platform to help the Ministry of Justice respond to increased inquests linked to the Labour manifesto commitment on Hillsborough Law.',
+                    'Building a high-profile and tight-deadline legal aid platform to help the Ministry of Justice respond to increased inquests linked to the Labour manifesto commitment on Hillsborough Law.',
                     true,
                     'mt-12',
                     ['typescript', 'expressjs', 'python', 'postgresql', 'terraform', 'aws', 'claude'],
